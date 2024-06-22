@@ -38,9 +38,12 @@ WeChatFolder = Path(open(root.joinpath('private/wechat-folder')).read())
 # %% ---- 2024-06-22 ------------------------
 # Play ground
 if __name__ == '__main__':
+    # gets the key of the WeChat db
+    # The 8 is prior parameter without a reason
     key = get_key(WeChatFolder, 8)
     print(key)
 
+    # reads the db and put them into output_dir after decryption
     parse_db(key, WeChatFolder, output_dir)
 
 
