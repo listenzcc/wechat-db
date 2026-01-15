@@ -1,5 +1,6 @@
 clone
 private
 output
+output-*
 
 __pycache__

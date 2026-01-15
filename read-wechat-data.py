@@ -20,15 +20,15 @@ Functions:
 # Requirements and constants
 from pathlib import Path
 from tqdm.auto import tqdm
+from datetime import datetime
 
 from util.get_db_key import get_key
 from util.parse_db import parse_db
 
-root = Path(__file__).parent
-output_dir = root.joinpath('output')
-output_dir.mkdir(exist_ok=True)
+output_dir = Path(f'output/{datetime.now().isoformat()}'.replace(':', ''))
+output_dir.mkdir(exist_ok=True, parents=True)
 
-WeChatFolder = Path(open(root.joinpath('private/wechat-folder')).read())
+WeChatFolder = Path(open('private/wechat-folder').read())
 
 
 # %% ---- 2024-06-22 ------------------------
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # gets the key of the WeChat db
     # The 8 is prior parameter without a reason
     key = get_key(WeChatFolder, 8)
-    print(key)
+    print(f'Got {key=}')
 
     # reads the db and put them into output_dir after decryption
     parse_db(key, WeChatFolder, output_dir)
