@@ -144,6 +144,7 @@ def get_key(db_path, addr_len):
         if verify_key(key_bytes, MicroMsg_path):
             return key_bytes.hex()
 
+    # ! The trying 3.0 version key of WeChat.
     # for i in tqdm(type_addrs):
     #     for j in tqdm(range(i, i - 2000, -1)):  # -addr_len):
     #         key_bytes = read_key_bytes(pm.process_handle, j, addr_len)

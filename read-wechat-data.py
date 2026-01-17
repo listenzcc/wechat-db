@@ -40,7 +40,8 @@ WeChatFolder = Path(open('private/wechat-folder').read())
 if __name__ == '__main__':
     # gets the key of the WeChat db
     # The 8 is prior parameter without a reason
-    key = get_key(WeChatFolder, 8)
+    # key = get_key(WeChatFolder, 8)
+    key = open('private/key1').read()
     print(f'Got {key=}')
 
     # reads the db and put them into output_dir after decryption

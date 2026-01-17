@@ -1,10 +1,18 @@
 # Try to Read WeChat db
 
 Successfully parse my chat records in my own WeChat folder.
+The code only works for WeChat 3.? versions.
+But it fails on newer 4.? versions.
+
+Fuck WeChat.
 
 ---
 
 [toc]
+
+## Got WeChat Key
+
+Tried <https://github.com/ycccccccy/wx_key.git>, but it doesn't work.
 
 ## Simple to use
 
